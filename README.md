@@ -8,6 +8,15 @@ The challenge is to build out this QR code component and get it looking as close
 
 ## Project details
 
+### Main technologies
+
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" width="56" alt="html5 logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" width="56" alt="css3 logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" height="40" width="56" alt="sass logo"  />
+</div>
+<hr>
+
 - The project was build with: HTML and CSS(SCSS), following [BEM](http://getbem.com/introduction/) convention (`block__element--modifier`).
 - The scss files were divided in partial and a main scss file, that is called `main.scss`. All files are located in the `/assets/scss/` folder.
 - All properties are organized following the [idiomatic CSS](https://github.com/necolas/idiomatic-css)
