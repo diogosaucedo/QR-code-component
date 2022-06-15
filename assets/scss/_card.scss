@@ -1,0 +1,81 @@
+@use "colors";
+
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+//
+// @mixin card-layout: set card layout with flex properties. @mixin was used
+// instead of #card-layout because 2 classes are created in
+// target file.
+//
+// @mixin custumize-font: mixin to display custom elements. Recieves:
+// font-size, font-weight and color.
+//
+// The two members(mixins) created has goal to facilitate reuse of the code
+// and readability.
+//
+
+@mixin card-layout() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin custumize-font($font-size, $font-weight, $color) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+// ==========================================================================
+// Card component
+// ==========================================================================
+
+//
+// Here was used BEM convention to create component.
+// (block__element--modifier)
+//
+// @.card: Sets the properties of the card.
+// @.card__img: Sets the properties of the image.
+// @.card__title(&__title): Sets the properties of the card title.
+// @.card__description(&__description): Sets the properties of the card
+// description.
+//
+
+.card {
+  // Layout
+  @include card-layout();
+
+  // Box Model
+  width: 30rem;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+
+  // Display
+  box-shadow: 0.5rem 0.5rem 1rem lighten(colors.$dark-blue, 50);
+  background-color: colors.$white;
+  text-align: center;
+
+  &__image {
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  &__title {
+    // Box Model
+    margin: 2rem 0;
+
+    // Display
+    @include custumize-font(2.2rem, 700, colors.$dark-blue);
+  }
+
+  &__description {
+    // Box Model
+    padding-bottom: 1rem;
+
+    // Display
+    @include custumize-font(1.6rem, 400, colors.$grayish-blue);
+  }
+}

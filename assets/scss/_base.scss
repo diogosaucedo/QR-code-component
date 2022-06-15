@@ -1,0 +1,38 @@
+@use "colors";
+
+// ===========================================================================
+// General rules
+// ===========================================================================
+
+//
+// @*: Box-model's properties for all elements.
+// @html: Sets the font-size property to 62.5%, which makes it possible to use
+// 1rem to 10px.
+// @body: Sets the basic properties of layout.
+//
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  // Layout
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Box Model
+  width: 100vw;
+  height: 100vh;
+
+  // Display
+  list-style-type: none;
+  background-color: colors.$light-gray;
+  font-family: "Outfit", sans-serif;
+}
